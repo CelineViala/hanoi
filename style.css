@@ -1,0 +1,201 @@
+body{
+    box-sizing:content-box;
+    background-image: url(landscape.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 170%;
+    height: 100vh;
+    position: relative;
+    font-family:'Courier New', Courier, monospace;
+    
+    
+    
+}
+
+.msg{
+    text-align: center;
+    padding:1rem;
+    font-size: small;
+    width:100%;
+    background-color:rgba(255,255,255,0.85);
+    margin-bottom: 1em;
+   
+margin-left: auto;
+margin-right: auto;
+
+
+}
+.pause{
+    text-align: center;
+    font-size: xx-large;
+    
+}
+*{
+    
+    cursor: pointer;
+}
+
+.container{
+    height: fit-content;
+    margin-bottom: 50px;
+}
+.intro{
+    
+    box-shadow: 55px 55px 55px 55px rgba(255, 255, 255, .7);
+}
+.game{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2em;
+    margin-left: auto;
+    margin-right: auto;
+    padding:25px 0 15px 0;
+    width:80%;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-bottom: 20px solid rgba(255, 255, 255, 1);
+    box-shadow: 55px 55px 55px 55px rgba(255, 255, 255, .7);
+    border-radius: 25px;
+   
+}
+.settings{
+    display: flex;
+    flex-direction: column;
+    gap:1em;
+    margin-bottom: 5rem;
+}
+.settings__label {
+    text-align: center;
+}
+.settings__solve,.settings__restart {
+  min-height: 40px;
+  background: radial-gradient(circle, rgba(66,214,216,1) 0%, rgba(0,125,107,0.5214460784313726) 100%);  
+  text-shadow: 3px 3px 2px rgba(0, 0, 0, 0.95);
+  border-radius: 20px;
+  color: #FFF;
+  font-size: 20px;
+  padding: 15px;
+  letter-spacing: 1px;
+  font-weight: 200;
+ 
+}
+.title{
+    text-align: center;
+    
+    font-size: 50px;
+    background-color:  rgba(255, 255, 255, 0.7);
+    margin-bottom: 1rem;
+    padding-top: 1em;
+
+    min-height: 3vh;
+    color:rgb(23,148,135);
+    text-shadow: 3px 3px 2px rgba(186, 236, 193, 0.95);;
+}
+
+.tower{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    min-height: 465px;
+    width:20%;
+    background-image: url(vertical.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-bottom: 20px solid black;
+}
+.counter{
+    text-align: center;
+    font-size: xx-large;
+    margin-bottom: 3%;
+}
+.part{
+    margin-left: auto;
+    margin-right: auto;
+    display:block;
+    /* avoid error Unable to preventDefault inside passive event listener due to target being treated as passive. */
+    touch-action: none;
+}
+
+.part8{
+    
+    width:14%;
+}
+.part7{
+    
+    width:20%
+}
+.part6{
+    
+    width:28%
+}
+.part5{
+    
+    width:38%
+}
+.part4{
+    width:48.5%
+}
+.part3{
+    width:62%;
+}
+.part2{
+    width:78.5%;
+}
+.part1{
+    width:100%;
+}
+
+#footer{
+    text-align: center;
+    padding: 1em;
+    position: fixed;
+    bottom: 0px;
+    background-color:rgb(66,214,216);
+    box-shadow: 8px 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    font-size: large;
+    width: 100%;
+    height: 50px;
+    color: #ffffff;
+    text-shadow: 1px 1px 2px rgba(0,0,0, 0.95);;
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 1500px) {
+    #footer{
+        
+        padding: 0.5em;
+    }
+    .counter{
+        font-size: large;
+    }
+    body{
+        background-size: 500%;
+        
+    }
+    
+    .title{
+        font-size: xx-large;
+        
+    }
+    .settings{
+        height: 70%;
+    }
+    
+    .game{
+        gap:0.5em;
+        width: 90%;
+    
+        
+    }
+    .tower{
+        min-height: 220px;
+        border-bottom: 10px solid black;
+        width:30%;
+    }
+    .settings__solve,.settings__restart {
+        font-size: smaller;
+    }
+
+   
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dragula/3.6.6/dragula.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/dragula/3.6.6/dragula.min.js' defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.15.0/Sortable.min.js" defer></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+
+    
+    <div class="intro">
+
+        <h1 class="title">Les tours de Hanoï </h1>
+        <p class="msg">But du jeu : Reconstituer la tour la troisième barre en un minimum de déplacements.
+        On ne peut déplacer que le premier disque d'une pile.
+        Un disque ne peut être posé que sur un disque de plus grande taille ou sur une barre vide.
+        </p>
+    </div>
+    <div class="game">
+
+        <div class="tower">
+            <img data-position="5" class="part part5 first" src="hanoi1.png" alt="">
+            <img data-position="4" class="part part4 next" src="hanoi1.png" alt="">
+            <img data-position="3" class="part part3 first" src="hanoi1.png" alt="">
+            <img data-position="2" class="part part2 next" src="hanoi1.png" alt="">
+            <img data-position="1" class="part part1 next" src="hanoi1.png" alt="">
+            
+        
+        </div>
+        <div class="tower">
+            
+        </div>
+
+        <div class="tower">
+            
+        </div>
+        <div class="settings">
+            <div>
+                <div class="counter"> <span class="movesNb">0</span> <span class="textCounter">déplacement</span></div>
+            </div>
+            <input id="nbDisks" type="range" min="2" max="8" value="3">
+            <label class="settings__label" for="nbDisks">Nombre de disques : <span class="valueNbDisks">3</span> </label>
+            <button class="settings__solve">Voir la solution optimale</button>
+            <p class="pause"></p>
+            <button class="settings__restart">Recommencer</button>
+            
+    
+        </div>
+    </div>
+</div>
+    <footer id="footer"> Céline V. - 2022 </footer>
+</body>
+</html>
+
