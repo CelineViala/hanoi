@@ -19,7 +19,7 @@ const app={
     },
     rules: `But du jeu : Reconstituer la tour la troisième barre en un minimum de déplacements.
     On ne peut déplacer que le premier disque d'une pile.
-    Un disque ne peut être posé que sur un disque de plus grande taille ou sur une barre vide.`,
+    Un disque ne peut être posé que sur un disque de plus grande taille ou sur une barre vide. Pour déplacer un disque : cliquez dessus et faites-le glisser.`,
     drake:null, //the instance of Dragula (drag and drop library)
     handleDragNDrop(){
         this.drake=dragula(Array.from(this.domElem.towers), {
