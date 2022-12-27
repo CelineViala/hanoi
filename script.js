@@ -94,6 +94,7 @@ const app={
             }
             if (i == this.moves.length) {
                 clearInterval(this.interval);
+                this.domElem.pauseBtn.style.display="none";
                 this.domElem.pauseBtn.textContent = "";
             }
         }, 600);
@@ -101,6 +102,7 @@ const app={
     addEvents(){
         this.domElem.solveBtn.addEventListener("click", () => {
             this.init(true);
+            this.domElem.pauseBtn.style.display="block";
             this.domElem.pauseBtn.textContent = "⏸";
             this.solve();
         })
@@ -116,22 +118,25 @@ const app={
         })
         this.domElem.pauseBtn.addEventListener("click", () => {
             if (!this.pause) {
+                this.domElem.pauseBtn.style.display="block";
                 this.domElem.pauseBtn.textContent = "⏵";
                 this.pause = true;
             } else {
+                this.domElem.pauseBtn.style.display="block";
                 this.domElem.pauseBtn.textContent = "⏸";
                 this.pause = false;
             }
         })
     },
     init(reset=false) {
+        this.domElem.pauseBtn.style.display="none";
+        this.domElem.pauseBtn.textContent = "";
         if(!reset) //useful only for the first initialization
         {   
             this.addEvents();
             this.handleDragNDrop(); 
         }
         this.pause=false;
-        this.domElem.pauseBtn.textContent = "";
         clearInterval(this.interval);
         this.moves = [];
         this.nbMoves = 0;
