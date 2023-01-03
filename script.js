@@ -103,7 +103,7 @@ const app={
         this.domElem.solveBtn.addEventListener("click", () => {
             this.init(true);
             this.domElem.pauseBtn.style.display="block";
-            this.domElem.pauseBtn.textContent = "⏸";
+            this.domElem.pauseBtn.setAttribute("src","pause.png");
             this.solve();
         })
         this.domElem.restartBtn.addEventListener("click", () => {
@@ -119,18 +119,17 @@ const app={
         this.domElem.pauseBtn.addEventListener("click", () => {
             if (!this.pause) {
                 this.domElem.pauseBtn.style.display="block";
-                this.domElem.pauseBtn.textContent = "⏵";
+                this.domElem.pauseBtn.setAttribute("src","play.png");
                 this.pause = true;
             } else {
                 this.domElem.pauseBtn.style.display="block";
-                this.domElem.pauseBtn.textContent = "⏸";
+                this.domElem.pauseBtn.setAttribute("src","pause.png");
                 this.pause = false;
             }
         })
     },
     init(reset=false) {
         this.domElem.pauseBtn.style.display="none";
-        this.domElem.pauseBtn.textContent = "";
         if(!reset) //useful only for the first initialization
         {   
             this.addEvents();

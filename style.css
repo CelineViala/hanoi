@@ -28,6 +28,7 @@ margin-right: auto;
 
 }
 .pause{
+    display: none;
     text-align: center;
     font-size: xx-large;
     border: #000 1px solid;
