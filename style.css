@@ -111,7 +111,7 @@ margin-right: auto;
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
-    min-height: 465px;
+/* min-height: 465px; */
     width:20%;
     background-image: url(vertical.png);
     background-position: center;
@@ -203,7 +203,7 @@ margin-right: auto;
         
     }
     .tower{
-        min-height: 220px;
+        /* min-height: 220px; */
         border-bottom: 10px solid black;
         width:30%;
     }
