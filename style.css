@@ -28,7 +28,7 @@ margin-right: auto;
 
 }
 .pause{
-    display: none;
+    visibility: hidden;
     text-align: center;
     font-size: xx-large;
     border: #000 1px solid;

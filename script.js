@@ -94,15 +94,15 @@ const app={
             }
             if (i == this.moves.length) {
                 clearInterval(this.interval);
-                this.domElem.pauseBtn.style.display="none";
-                this.domElem.pauseBtn.textContent = "";
+                this.domElem.pauseBtn.style.visibility="hidden";
+                // this.domElem.pauseBtn.textContent = "";
             }
         }, 600);
     },
     addEvents(){
         this.domElem.solveBtn.addEventListener("click", () => {
             this.init(true);
-            this.domElem.pauseBtn.style.display="block";
+            this.domElem.pauseBtn.style.visibility="visible";
             this.domElem.pauseBtn.setAttribute("src","pause.png");
             this.solve();
         })
@@ -118,18 +118,27 @@ const app={
         })
         this.domElem.pauseBtn.addEventListener("click", () => {
             if (!this.pause) {
-                this.domElem.pauseBtn.style.display="block";
+                this.domElem.pauseBtn.style.visibility="visible";
                 this.domElem.pauseBtn.setAttribute("src","play.png");
                 this.pause = true;
             } else {
-                this.domElem.pauseBtn.style.display="block";
+                this.domElem.pauseBtn.style.visibility="visible";
                 this.domElem.pauseBtn.setAttribute("src","pause.png");
                 this.pause = false;
             }
         })
     },
     init(reset=false) {
-        this.domElem.pauseBtn.style.display="none";
+
+        if(screen.width<700)
+        {
+            this.domElem.rangeInput.setAttribute("max",7)
+        }
+        if(screen.width<500)
+        {
+            this.domElem.rangeInput.setAttribute("max",6)
+        }
+        this.domElem.pauseBtn.style.visibility="hidden";
         if(!reset) //useful only for the first initialization
         {   
             this.addEvents();
